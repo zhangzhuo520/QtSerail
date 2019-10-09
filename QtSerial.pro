@@ -24,12 +24,31 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        main.cpp \
-        widget.cpp
+    main.cpp \
+    widget.cpp \
+     frmmain.cpp \
+    api/iconhelper.cpp \
+    api/app.cpp \
+    api/appinit.cpp \
+    usercontrol/frmmessagebox.cpp \
+    usercontrol/frminputbox.cpp
 
 HEADERS += \
-        widget.h \
-    structdata.h
+     widget.h \
+     structdata.h \
+     frmmain.h\
+    api/iconhelper.h \
+    api/myhelper.h \
+    api/app.h \
+    api/appinit.h \
+    usercontrol/frmmessagebox.h \
+    usercontrol/frminputbox.h
 
 FORMS += \
-        widget.ui
+        widget.ui \
+        frmmain.ui\
+        usercontrol/frmmessagebox.ui \
+        usercontrol/frminputbox.ui
+
+RESOURCES += \
+    image.qrc

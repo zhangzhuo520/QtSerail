@@ -1,11 +1,18 @@
-#include "widget.h"
+#include "frmmain.h"
 #include <QApplication>
-
+#include "api/appinit.h"
+#include "api/myhelper.h"
+#include <QDebug>
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    Widget w;
-    w.show();
+    QApplication appc(argc, argv);
 
-    return a.exec();
+    AppInit *initApp = new AppInit;
+    initApp->loadInfo();
+
+    frmMain wmin;
+    myHelper::setStyle(":/pic/picture/qss/black.css");
+    wmin.show();
+
+    return appc.exec();
 }

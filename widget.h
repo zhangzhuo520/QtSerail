@@ -10,7 +10,6 @@ class QSerialPort;
 class Widget : public QWidget
 {
     Q_OBJECT
-
 public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
@@ -19,13 +18,16 @@ public:
     void openSerialport();
     void closeSerialport();
     void updateSerialport();
-    void writeData();
+    void writeData(QString);
+    void record(const QString&);
+    void setQss(const QString &);
 
 private slots:
     void on_serialControlPushButton_clicked();
     void receiveInfo();
 
 private:
+    void initUi();
     Ui::Widget *ui;
     QSerialPort *m_serialport;
     QList <QSerialPortInfo> m_portInfolist;
