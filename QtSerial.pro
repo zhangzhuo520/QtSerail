@@ -31,7 +31,8 @@ SOURCES += \
     api/app.cpp \
     api/appinit.cpp \
     usercontrol/frmmessagebox.cpp \
-    usercontrol/frminputbox.cpp
+    usercontrol/frminputbox.cpp \
+    datacontrol.cpp
 
 HEADERS += \
      widget.h \
@@ -42,7 +43,8 @@ HEADERS += \
     api/app.h \
     api/appinit.h \
     usercontrol/frmmessagebox.h \
-    usercontrol/frminputbox.h
+    usercontrol/frminputbox.h \
+    datacontrol.h
 
 FORMS += \
         widget.ui \

@@ -18,7 +18,7 @@
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="9,2">
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1,12,5">
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1,15,5">
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
@@ -187,7 +187,7 @@
      <item>
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -195,7 +195,7 @@
         </attribute>
         <layout class="QVBoxLayout" name="verticalLayout_14" stretch="10,2">
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_37" stretch="2,7">
+          <layout class="QHBoxLayout" name="horizontalLayout_37" stretch="2,7,2">
            <item>
             <spacer name="horizontalSpacer_5">
              <property name="orientation">
@@ -471,6 +471,19 @@
              </item>
             </layout>
            </item>
+           <item>
+            <spacer name="horizontalSpacer_13">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
           </layout>
          </item>
          <item>
@@ -478,6 +491,19 @@
            <property name="spacing">
             <number>18</number>
            </property>
+           <item>
+            <spacer name="horizontalSpacer_10">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
            <item>
             <widget class="QPushButton" name="pushButton">
              <property name="text">
@@ -499,6 +525,19 @@
              </property>
             </widget>
            </item>
+           <item>
+            <spacer name="horizontalSpacer_11">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
           </layout>
          </item>
         </layout>
@@ -509,7 +548,7 @@
         </attribute>
         <layout class="QVBoxLayout" name="verticalLayout_16" stretch="10,2">
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_39" stretch="2,7">
+          <layout class="QHBoxLayout" name="horizontalLayout_39" stretch="2,7,2">
            <item>
             <spacer name="horizontalSpacer_4">
              <property name="orientation">
@@ -813,6 +852,19 @@
              </item>
             </layout>
            </item>
+           <item>
+            <spacer name="horizontalSpacer_12">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
           </layout>
          </item>
          <item>
@@ -820,6 +872,19 @@
            <property name="spacing">
             <number>18</number>
            </property>
+           <item>
+            <spacer name="horizontalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
            <item>
             <widget class="QPushButton" name="pushButton_4">
              <property name="text">
@@ -841,6 +906,19 @@
              </property>
             </widget>
            </item>
+           <item>
+            <spacer name="horizontalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
           </layout>
          </item>
         </layout>
@@ -849,26 +927,26 @@
         <attribute name="title">
          <string>舵机测试</string>
         </attribute>
-        <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0">
+        <layout class="QVBoxLayout" name="verticalLayout_5" stretch="0,0">
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>285</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
          <item>
           <widget class="QGroupBox" name="groupBox_3">
            <property name="title">
-            <string>GroupBox</string>
+            <string>参数控制</string>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_12">
-            <item>
-             <spacer name="verticalSpacer">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>285</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_30">
               <item>
@@ -1020,6 +1098,246 @@
         <attribute name="title">
          <string>串口舵机测试</string>
         </attribute>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <spacer name="horizontalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="2">
+          <spacer name="horizontalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="1">
+          <layout class="QHBoxLayout" name="horizontalLayout_40">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_17">
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>舵机ID</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_id1_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_id2_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_id3_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_id4_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_id5_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_id6_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_id7_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_id8_edit"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_18">
+             <item>
+              <widget class="QLabel" name="label_36">
+               <property name="text">
+                <string>位置1</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_lpos1_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_lpos2_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_lpos3_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_lpos4_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_lpos5_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_lpos6_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_lpos7_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_lpos8_edit"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_19">
+             <item>
+              <widget class="QLabel" name="label_37">
+               <property name="text">
+                <string>位置2</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_rpos1_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_rpos2_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_rpos3_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_rpos4_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_rpos5_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_rpos6_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_rpos7_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_rpos8_edit"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_20">
+             <item>
+              <widget class="QLabel" name="label_38">
+               <property name="text">
+                <string>速度</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_speed1_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_speed2_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_speed3_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_speed4_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_speed5_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_speed6_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_speed7_edit"/>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="servo_speed8_edit"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item row="2" column="1">
+          <layout class="QHBoxLayout" name="horizontalLayout_41">
+           <item>
+            <widget class="QLabel" name="label_39">
+             <property name="text">
+              <string>停顿时间</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="servo_waittime_edit"/>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_40">
+             <property name="text">
+              <string>运行次数</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="servo_runnumber_edit">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_run">
+             <property name="text">
+              <string>运行</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_stop">
+             <property name="text">
+              <string>停止</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="1">
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="3" column="1">
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
        </widget>
       </widget>
      </item>

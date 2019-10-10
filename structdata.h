@@ -265,6 +265,7 @@
 class Package
 {
 public:
+    typedef unsigned char uchar;
     explicit Package():
         header(0xfa),
         address(0x00),
@@ -283,16 +284,16 @@ public:
 
     ~Package(){}
 
-    char header;
-    char address;
-    char command;
-    char state;
-    char id_arg1;
-    char arg1[2];
-    char id_arg2;
-    char arg2[2];
-    char checknum;
-    char exitcode;
+    uchar header;
+    uchar address;
+    uchar command;
+    uchar state;
+    uchar id_arg1;
+    uchar arg1[2];
+    uchar id_arg2;
+    uchar arg2[2];
+    uchar checknum;
+    uchar exitcode;
 };
 
 

@@ -2,12 +2,14 @@
 #include "ui_frmmain.h"
 #include "api/myhelper.h"
 #include <QDebug>
+
 frmMain::frmMain(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::frmMain)
 {
-     ui->setupUi(this);
-    this->initStyle();
+    ui->setupUi(this);
+    initSysIcon();
+    initStyle();
     myHelper::moveFormToCenter(this);
 }
 
@@ -34,9 +36,19 @@ void frmMain::initStyle()
     QIcon title_icon(":/pic/picture/serial.png");
     QPixmap pixmap = title_icon.pixmap(QSize(16, 16));
     ui->lab_ico->setPixmap(pixmap);
-
+   setWindowIcon(title_icon);
     connect(ui->btn_close, SIGNAL(clicked()), this, SLOT(close()));
     connect(ui->btn_min, SIGNAL(clicked()), this, SLOT(showMinimized()));
+    connect(ui->btn_min, SIGNAL(clicked()), m_systrayIcon, SLOT(show()));
+    connect(m_systrayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)), this, SLOT(slot_systrayIcon_active(QSystemTrayIcon::ActivationReason)));
+}
+
+void frmMain::initSysIcon()
+{
+    m_systrayIcon = new QSystemTrayIcon(this);
+    QIcon icon = QIcon(":/pic/picture/serial.png");
+    m_systrayIcon->setIcon(icon);
+    m_systrayIcon->setToolTip("SerialTool");
 }
 
 bool frmMain::eventFilter(QObject *obj, QEvent *event)
@@ -63,6 +75,12 @@ void frmMain::on_btn_max_clicked()
         this->setProperty("CanMove", false);
     }
     m_max = !m_max;
+}
+
+void frmMain::slot_systrayIcon_active(QSystemTrayIcon::ActivationReason reson)
+{
+    if(reson == QSystemTrayIcon::Trigger)
+        this->showNormal();
 }
 
 

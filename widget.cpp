@@ -1,14 +1,17 @@
 #include "widget.h"
 #include "ui_widget.h"
+#include "datacontrol.h"
 #include <QSerialPort>
 #include <QDebug>
 #include <QTime>
 #include <QPixmap>
 #include <QIcon>
 #include <QFile>
+
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget),
+    m_data_control(new DataControl(this)),
     m_serialport_state(false)
 {
     ui->setupUi(this);
@@ -19,6 +22,11 @@ Widget::Widget(QWidget *parent) :
 Widget::~Widget()
 {
     delete ui;
+}
+
+Ui::Widget *Widget::uiWidget() const
+{
+    return ui;
 }
 
 void Widget::initSerialport()
@@ -112,6 +120,7 @@ void Widget::closeSerialport()
         m_serialport->close();
     }
     delete m_serialport;
+    m_serialport = nullptr;
     record("串口已关闭");
 }
 
@@ -120,12 +129,18 @@ void Widget::updateSerialport()
     openSerialport();
 }
 
-void Widget::writeData(QString string)
+void Widget::sendData(const QByteArray& data)
 {
-    if(m_serialport_state)
+    if(m_serialport_state && m_serialport!=nullptr)
     {
-        m_serialport->write(string.toLatin1().data(), sizeof(string));
-        record("发送数据： " + string);
+        m_serialport->write(data.data(), data.count());
+
+        QString string;
+        for (int i = 0; i < data.count(); i ++)
+        {
+           string = string  +  QString::number((uchar)data.at(i),  16) + "   ";
+        }
+        record("发送数据： " +  string);
     }
 }
 
@@ -180,4 +195,14 @@ void Widget::initUi()
     QIcon icon(":/pic/picture/close.png");
     QPixmap pixmap = icon.pixmap(QSize(24, 24));
     ui->SerialStateLabel->setPixmap(pixmap);
+}
+
+void Widget::on_btn_run_clicked()
+{
+    sendData(m_data_control->serialTestData());
+}
+
+void Widget::on_btn_stop_clicked()
+{
+
 }
