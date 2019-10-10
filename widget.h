@@ -18,7 +18,7 @@ public:
 
     Ui::Widget *uiWidget() const;
     void initSerialport();
-    void openSerialport();
+    bool openSerialport();
     void closeSerialport();
     void updateSerialport();
     void sendData(const QByteArray&);

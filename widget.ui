@@ -18,7 +18,7 @@
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="9,2">
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1,15,5">
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="1,1,0,5">
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
@@ -187,7 +187,7 @@
      <item>
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>0</number>
+        <number>3</number>
        </property>
        <widget class="QWidget" name="tab">
         <attribute name="title">
@@ -225,7 +225,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_6"/>
+                    <widget class="QLineEdit" name="pwTopEdit"/>
                    </item>
                   </layout>
                  </item>
@@ -239,7 +239,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_11"/>
+                    <widget class="QLineEdit" name="pwMidEdit"/>
                    </item>
                   </layout>
                  </item>
@@ -253,7 +253,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_7"/>
+                    <widget class="QLineEdit" name="pwBottomEdit"/>
                    </item>
                   </layout>
                  </item>
@@ -267,7 +267,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_15"/>
+                    <widget class="QLineEdit" name="startVEdit"/>
                    </item>
                   </layout>
                  </item>
@@ -281,7 +281,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_8"/>
+                    <widget class="QLineEdit" name="driveFreqEdit"/>
                    </item>
                   </layout>
                  </item>
@@ -295,7 +295,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_9"/>
+                    <widget class="QLineEdit" name="dieAreaEdit"/>
                    </item>
                   </layout>
                  </item>
@@ -313,7 +313,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_10"/>
+                    <widget class="QLineEdit" name="angleTopEdit"/>
                    </item>
                   </layout>
                  </item>
@@ -327,7 +327,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_16"/>
+                    <widget class="QLineEdit" name="angleMidEdit"/>
                    </item>
                   </layout>
                  </item>
@@ -341,7 +341,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_12"/>
+                    <widget class="QLineEdit" name="angleBottomEdit"/>
                    </item>
                   </layout>
                  </item>
@@ -355,7 +355,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_13"/>
+                    <widget class="QLineEdit" name="maxOutputEdit"/>
                    </item>
                   </layout>
                  </item>
@@ -369,7 +369,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QLineEdit" name="lineEdit_14"/>
+                    <widget class="QLineEdit" name="freqSetEdit"/>
                    </item>
                   </layout>
                  </item>
@@ -389,7 +389,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_18"/>
+                  <widget class="QLineEdit" name="selflockSetEdit"/>
                  </item>
                 </layout>
                </item>
@@ -403,7 +403,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_20"/>
+                  <widget class="QLineEdit" name="signalResetEdit"/>
                  </item>
                 </layout>
                </item>
@@ -417,7 +417,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_17"/>
+                  <widget class="QLineEdit" name="servoDirEdit"/>
                  </item>
                 </layout>
                </item>
@@ -431,7 +431,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_19"/>
+                  <widget class="QLineEdit" name="stallingGuardEdit"/>
                  </item>
                 </layout>
                </item>
@@ -449,7 +449,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_21"/>
+                  <widget class="QLineEdit" name="GuardTimeEdit"/>
                  </item>
                 </layout>
                </item>
@@ -463,7 +463,7 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_22"/>
+                  <widget class="QLineEdit" name="GuardOutputEdit"/>
                  </item>
                 </layout>
                </item>
@@ -505,21 +505,21 @@
             </spacer>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton">
+            <widget class="QPushButton" name="btn_read_configu">
              <property name="text">
               <string>读取参数</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_2">
+            <widget class="QPushButton" name="btn_load_configu">
              <property name="text">
               <string>下载参数</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_3">
+            <widget class="QPushButton" name="btn_servo_resetu">
              <property name="text">
               <string>舵机复位</string>
              </property>
@@ -546,378 +546,382 @@
         <attribute name="title">
          <string>串口舵机配置</string>
         </attribute>
-        <layout class="QVBoxLayout" name="verticalLayout_16" stretch="10,2">
+        <layout class="QVBoxLayout" name="verticalLayout_21">
          <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_39" stretch="2,7,2">
+          <layout class="QVBoxLayout" name="verticalLayout_16" stretch="10,2">
            <item>
-            <spacer name="horizontalSpacer_4">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_15">
+            <layout class="QHBoxLayout" name="horizontalLayout_72" stretch="2,7,2">
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_38">
-               <item>
-                <layout class="QVBoxLayout" name="verticalLayout_8">
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_70">
-                   <item>
-                    <widget class="QLabel" name="label_69">
-                     <property name="text">
-                      <string>目前ID</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="lineEdit_53"/>
-                   </item>
-                  </layout>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_51">
-                   <item>
-                    <widget class="QLabel" name="label_52">
-                     <property name="text">
-                      <string>脉宽上限</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="lineEdit_23"/>
-                   </item>
-                  </layout>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_52">
-                   <item>
-                    <widget class="QLabel" name="label_53">
-                     <property name="text">
-                      <string>脉宽中点</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="lineEdit_24"/>
-                   </item>
-                  </layout>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_53">
-                   <item>
-                    <widget class="QLabel" name="label_54">
-                     <property name="text">
-                      <string>脉宽下限</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="lineEdit_25"/>
-                   </item>
-                  </layout>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_54">
-                   <item>
-                    <widget class="QLabel" name="label_55">
-                     <property name="text">
-                      <string>启动电压</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="lineEdit_26"/>
-                   </item>
-                  </layout>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_55">
-                   <item>
-                    <widget class="QLabel" name="label_56">
-                     <property name="text">
-                      <string>驱动频率</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="lineEdit_27"/>
-                   </item>
-                  </layout>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_56">
-                   <item>
-                    <widget class="QLabel" name="label_57">
-                     <property name="text">
-                      <string>死区</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="lineEdit_28"/>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </item>
-               <item>
-                <layout class="QVBoxLayout" name="verticalLayout_9">
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_71">
-                   <item>
-                    <widget class="QLabel" name="label_70">
-                     <property name="text">
-                      <string>新设ID</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="lineEdit_54"/>
-                   </item>
-                  </layout>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_62">
-                   <item>
-                    <widget class="QLabel" name="label_62">
-                     <property name="text">
-                      <string>角度上限</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="lineEdit_46"/>
-                   </item>
-                  </layout>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_63">
-                   <item>
-                    <widget class="QLabel" name="label_63">
-                     <property name="text">
-                      <string>角度中点</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="lineEdit_47"/>
-                   </item>
-                  </layout>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_64">
-                   <item>
-                    <widget class="QLabel" name="label_64">
-                     <property name="text">
-                      <string>角度下限</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="lineEdit_48"/>
-                   </item>
-                  </layout>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_65">
-                   <item>
-                    <widget class="QLabel" name="label_65">
-                     <property name="text">
-                      <string>最大输出</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="lineEdit_49"/>
-                   </item>
-                  </layout>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_66">
-                   <item>
-                    <widget class="QLabel" name="label_66">
-                     <property name="text">
-                      <string>频率设置</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLineEdit" name="lineEdit_50"/>
-                   </item>
-                  </layout>
-                 </item>
-                </layout>
-               </item>
-              </layout>
+              <spacer name="horizontalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_57">
+              <layout class="QVBoxLayout" name="verticalLayout_15">
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_58">
+                <layout class="QHBoxLayout" name="horizontalLayout_42">
                  <item>
-                  <widget class="QLabel" name="label_58">
-                   <property name="text">
-                    <string>自锁设置</string>
-                   </property>
-                  </widget>
+                  <layout class="QVBoxLayout" name="verticalLayout_8">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_69">
+                     <item>
+                      <widget class="QLabel" name="label_69">
+                       <property name="text">
+                        <string>目前ID</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="lineEdit_53"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_50">
+                     <item>
+                      <widget class="QLabel" name="label_53">
+                       <property name="text">
+                        <string>脉宽上限</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="pwTopEditS"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_51">
+                     <item>
+                      <widget class="QLabel" name="label_54">
+                       <property name="text">
+                        <string>脉宽中点</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="pwMidEditS"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_52">
+                     <item>
+                      <widget class="QLabel" name="label_55">
+                       <property name="text">
+                        <string>脉宽下限</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="pwBottomEditS"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_53">
+                     <item>
+                      <widget class="QLabel" name="label_56">
+                       <property name="text">
+                        <string>启动电压</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="startVEditS"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_54">
+                     <item>
+                      <widget class="QLabel" name="label_57">
+                       <property name="text">
+                        <string>驱动频率</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="driveFreqEditS"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_55">
+                     <item>
+                      <widget class="QLabel" name="label_58">
+                       <property name="text">
+                        <string>死区</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="dieAreaEditS"/>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_29"/>
-                 </item>
-                </layout>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_59">
-                 <item>
-                  <widget class="QLabel" name="label_59">
-                   <property name="text">
-                    <string>信号复位</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLineEdit" name="lineEdit_43"/>
-                 </item>
-                </layout>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_60">
-                 <item>
-                  <widget class="QLabel" name="label_60">
-                   <property name="text">
-                    <string>舵机方向</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLineEdit" name="lineEdit_44"/>
+                  <layout class="QVBoxLayout" name="verticalLayout_9">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_70">
+                     <item>
+                      <widget class="QLabel" name="label_70">
+                       <property name="text">
+                        <string>新设ID</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="lineEdit_54"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_56">
+                     <item>
+                      <widget class="QLabel" name="label_59">
+                       <property name="text">
+                        <string>角度上限</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="angleTopEditS"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_57">
+                     <item>
+                      <widget class="QLabel" name="label_60">
+                       <property name="text">
+                        <string>角度中点</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="angleMidEditS"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_58">
+                     <item>
+                      <widget class="QLabel" name="label_61">
+                       <property name="text">
+                        <string>角度下限</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="angleBottomEditS"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_59">
+                     <item>
+                      <widget class="QLabel" name="label_62">
+                       <property name="text">
+                        <string>最大输出</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="maxOutputEditS"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_60">
+                     <item>
+                      <widget class="QLabel" name="label_63">
+                       <property name="text">
+                        <string>频率设置</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="freqSetEditS"/>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
                  </item>
                 </layout>
                </item>
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_61">
                  <item>
-                  <widget class="QLabel" name="label_61">
-                   <property name="text">
-                    <string>堵转保护</string>
-                   </property>
-                  </widget>
+                  <layout class="QHBoxLayout" name="horizontalLayout_62">
+                   <item>
+                    <widget class="QLabel" name="label_64">
+                     <property name="text">
+                      <string>自锁设置</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="selflockSetEditS"/>
+                   </item>
+                  </layout>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit_45"/>
+                  <layout class="QHBoxLayout" name="horizontalLayout_63">
+                   <item>
+                    <widget class="QLabel" name="label_65">
+                     <property name="text">
+                      <string>信号复位</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="signalResetEditS"/>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_64">
+                   <item>
+                    <widget class="QLabel" name="label_66">
+                     <property name="text">
+                      <string>舵机方向</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="servoDirEditS"/>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_65">
+                   <item>
+                    <widget class="QLabel" name="label_67">
+                     <property name="text">
+                      <string>堵转保护</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="stallingGuardEditS"/>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_66">
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_67">
+                   <item>
+                    <widget class="QLabel" name="label_68">
+                     <property name="text">
+                      <string>保护时间</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="GuardTimeEditS"/>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_68">
+                   <item>
+                    <widget class="QLabel" name="label_71">
+                     <property name="text">
+                      <string>保护输出</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="GuardOutputEditS"/>
+                   </item>
+                  </layout>
                  </item>
                 </layout>
                </item>
               </layout>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_67">
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_68">
-                 <item>
-                  <widget class="QLabel" name="label_67">
-                   <property name="text">
-                    <string>保护时间</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLineEdit" name="lineEdit_51"/>
-                 </item>
-                </layout>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_69">
-                 <item>
-                  <widget class="QLabel" name="label_68">
-                   <property name="text">
-                    <string>保护输出</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLineEdit" name="lineEdit_52"/>
-                 </item>
-                </layout>
-               </item>
-              </layout>
+              <spacer name="horizontalSpacer_9">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </item>
            <item>
-            <spacer name="horizontalSpacer_12">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
+            <layout class="QHBoxLayout" name="horizontalLayout_71">
+             <property name="spacing">
+              <number>18</number>
              </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_50">
-           <property name="spacing">
-            <number>18</number>
-           </property>
-           <item>
-            <spacer name="horizontalSpacer_8">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_4">
-             <property name="text">
-              <string>读取参数</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_5">
-             <property name="text">
-              <string>下载参数</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_6">
-             <property name="text">
-              <string>舵机复位</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer_9">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
+             <item>
+              <spacer name="horizontalSpacer_14">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_read_configuS">
+               <property name="text">
+                <string>读取参数</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_load_configuS">
+               <property name="text">
+                <string>下载参数</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_servo_resetuS">
+               <property name="text">
+                <string>舵机复位</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_15">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
            </item>
           </layout>
          </item>
@@ -960,7 +964,7 @@
                <widget class="QLineEdit" name="lineEdit"/>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_7">
+               <widget class="QPushButton" name="btn_top">
                 <property name="text">
                  <string>上</string>
                 </property>
@@ -970,7 +974,7 @@
                <widget class="QLineEdit" name="lineEdit_2"/>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_8">
+               <widget class="QPushButton" name="btn_mid">
                 <property name="text">
                  <string>中</string>
                 </property>
@@ -980,7 +984,7 @@
                <widget class="QLineEdit" name="lineEdit_3"/>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_9">
+               <widget class="QPushButton" name="btn_bottom">
                 <property name="text">
                  <string>下</string>
                 </property>
@@ -991,7 +995,7 @@
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_35">
               <item>
-               <widget class="QPushButton" name="pushButton_10">
+               <widget class="QPushButton" name="btn_feedback">
                 <property name="text">
                  <string>反馈</string>
                 </property>
@@ -1022,7 +1026,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="lineEdit_4"/>
+                   <widget class="QLineEdit" name="posEdit"/>
                   </item>
                  </layout>
                 </item>
@@ -1036,7 +1040,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="lineEdit_5"/>
+                   <widget class="QLineEdit" name="temperatureEdit"/>
                   </item>
                  </layout>
                 </item>
@@ -1067,7 +1071,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="lineEdit_30"/>
+                   <widget class="QLineEdit" name="voltageEdit"/>
                   </item>
                  </layout>
                 </item>
@@ -1081,7 +1085,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLineEdit" name="lineEdit_31"/>
+                   <widget class="QLineEdit" name="electricEdit"/>
                   </item>
                  </layout>
                 </item>

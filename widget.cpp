@@ -41,8 +41,15 @@ void Widget::initSerialport()
     ui->portNameComboBox->addItems(nameList);
 }
 
-void Widget::openSerialport()
+bool Widget::openSerialport()
 {
+    QString port = ui->portNameComboBox->currentText();
+    if(port.isEmpty())
+    {
+        record("打开串口失败, 没有可选择的串口!");
+        return false;
+    }
+
     m_serialport = new QSerialPort(this);
     if(m_serialport->isOpen())
     {
@@ -50,11 +57,11 @@ void Widget::openSerialport()
         m_serialport->close();
     }
 
-    m_serialport->setPortName(ui->portNameComboBox->currentText());
+    m_serialport->setPortName(port);
     if(!m_serialport->open(QIODevice::ReadWrite))
     {
-        qDebug() << "Open serialport failed!";
-        return;
+        qDebug() << "打开串口失败!";
+        return false;
     }
 
     switch (ui->baudRateComboBox->currentText().toInt()) {
@@ -110,6 +117,7 @@ void Widget::openSerialport()
     m_serialport->setStopBits(QSerialPort::OneStop); //一位停止位
     connect(m_serialport,SIGNAL(readyRead()),this,SLOT(receiveInfo()));
     record("串口已打开");
+    return true;
 }
 
 void Widget::closeSerialport()
@@ -164,12 +172,14 @@ void Widget::on_serialControlPushButton_clicked()
 {
     if (!m_serialport_state)
     {
-        m_serialport_state = true;
-        openSerialport();
-        QIcon icon(":/pic/picture/open.png");
-        QPixmap pixmap = icon.pixmap(QSize(24, 24));
-        ui->SerialStateLabel->setPixmap(pixmap);
-        ui->serialControlPushButton->setText("关闭");
+        if(openSerialport())
+        {
+            m_serialport_state = true;
+            QIcon icon(":/pic/picture/open.png");
+            QPixmap pixmap = icon.pixmap(QSize(24, 24));
+            ui->SerialStateLabel->setPixmap(pixmap);
+            ui->serialControlPushButton->setText("关闭");
+        }
     }
     else
     {
