@@ -3,10 +3,10 @@
 #include <QString>
 
 class QSettings;
-class DateWriter
+class DataWriter
 {
 public:
-    DateWriter();
+    DataWriter();
 
     void write(const QString&, const QString&);
 

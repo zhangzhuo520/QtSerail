@@ -1,5 +1,6 @@
 #ifndef STRUCTDATA_H
 #define STRUCTDATA_H
+#include <QString>
 ////////////////////////////////////////////////////////////////////////////////////////
 //通讯包数据格式：
 //数据头       1个字节   0XFA
@@ -294,6 +295,48 @@ public:
     uchar arg2[2];
     uchar checknum;
     uchar exitcode;
+};
+
+class GeneralServoConfig
+{
+public:
+    GeneralServoConfig(){}
+    ~GeneralServoConfig(){}
+
+    QString power_top;
+    QString power_mid;
+    QString power_bottom;
+    QString satrt_valtage;
+    QString drive_freq;
+    QString die_area;
+    QString angle_top;
+    QString angle_mid;
+    QString angle_bottom;
+    QString max_output;
+    QString freq_set;
+    QString selflock_set;
+    QString signal_reset;
+    QString servo_direction;
+    QString stalling_guard;
+    QString guard_time;
+    QString guard_output;
+ };
+
+class SerialServoConfig :  public GeneralServoConfig
+{
+public:
+    SerialServoConfig()
+    {
+
+    }
+
+    ~SerialServoConfig()
+    {
+
+    }
+
+    QString current_id;
+    QString new_id;
 };
 
 

@@ -33,8 +33,8 @@ SOURCES += \
     usercontrol/frmmessagebox.cpp \
     usercontrol/frminputbox.cpp \
     datacontrol.cpp \
-    datewriter.cpp \
-    datareader.cpp
+    datareader.cpp \
+    datawriter.cpp
 
 HEADERS += \
      widget.h \
@@ -47,8 +47,8 @@ HEADERS += \
     usercontrol/frmmessagebox.h \
     usercontrol/frminputbox.h \
     datacontrol.h \
-    datewriter.h \
-    datareader.h
+    datareader.h \
+    datawriter.h
 
 FORMS += \
         widget.ui \

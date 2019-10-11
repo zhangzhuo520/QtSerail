@@ -27,11 +27,36 @@ public:
 
 private slots:
     void on_serialControlPushButton_clicked();
+
     void receiveInfo();
 
     void on_btn_run_clicked();
 
     void on_btn_stop_clicked();
+
+    void on_btn_load_configU_clicked();
+
+    void on_btn_servo_resetU_clicked();
+
+    void on_btn_load_configS_clicked();
+
+    void on_btn_read_configS_clicked();
+
+    void on_btn_servo_resetS_clicked();
+
+    void on_btn_top_clicked();
+
+    void on_btn_mid_clicked();
+
+    void on_btn_bottom_clicked();
+
+    void on_posHorSlider_sliderMoved(int position);
+
+    void on_btn_feedback_clicked();
+
+    void on_openFilePushButton_clicked();
+
+    void on_SaveFilePushButton_clicked();
 
 private:
     void initUi();

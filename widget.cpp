@@ -216,3 +216,65 @@ void Widget::on_btn_stop_clicked()
 {
 
 }
+
+void Widget::on_btn_load_configU_clicked()
+{
+    m_data_control->save_general_config();
+    m_data_control->save_general_tofile();
+}
+
+void Widget::on_btn_servo_resetU_clicked()
+{
+
+}
+
+void Widget::on_btn_load_configS_clicked()
+{
+    m_data_control->save_serial_config();
+    m_data_control->save_serial_tofile();
+}
+
+void Widget::on_btn_read_configS_clicked()
+{
+
+}
+
+void Widget::on_btn_servo_resetS_clicked()
+{
+
+}
+
+void Widget::on_btn_top_clicked()
+{
+
+}
+
+void Widget::on_btn_mid_clicked()
+{
+
+}
+
+void Widget::on_btn_bottom_clicked()
+{
+
+}
+
+void Widget::on_posHorSlider_sliderMoved(int position)
+{
+
+}
+
+void Widget::on_btn_feedback_clicked()
+{
+
+}
+
+void Widget::on_openFilePushButton_clicked()
+{
+
+}
+
+void Widget::on_SaveFilePushButton_clicked()
+{
+
+}
