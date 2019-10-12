@@ -28,12 +28,15 @@ public:
     void read_general_config();
     void read_general_fromfile();
 
+    void servo_config();
+
 private:
     Widget *m_widget;
     Ui::Widget*m_ui;
     Package m_packge;
     SerialServoConfig m_serial_servo_config;
     GeneralServoConfig m_general_servo_config;
+    ServoConfig m_servo_config;
     DataWriter m_date_writer;
     DataReader m_data_reader;
 };

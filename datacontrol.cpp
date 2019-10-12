@@ -69,7 +69,7 @@ void DataControl::save_serial_config()
     m_serial_servo_config.power_bottom = m_ui->pwBottomEditS->text();
     m_serial_servo_config.power_mid = m_ui->pwMidEditS->text();
     m_serial_servo_config.power_top = m_ui->pwTopEditS->text();
-    m_serial_servo_config.satrt_valtage = m_ui->startVEditS->text();
+    m_serial_servo_config.start_valtage = m_ui->startVEditS->text();
     m_serial_servo_config.selflock_set = m_ui->selflockSetEditS->text();
     m_serial_servo_config.servo_direction = m_ui->servoDirEditS->text();
     m_serial_servo_config.signal_reset = m_ui->signalResetEditS->text();
@@ -92,7 +92,7 @@ void DataControl::save_serial_tofile()
     m_date_writer.write("s_power_bottom", m_serial_servo_config.power_bottom);
     m_date_writer.write("s_power_mid", m_serial_servo_config.power_mid);
     m_date_writer.write("s_power_top", m_serial_servo_config.power_top);
-    m_date_writer.write("s_satrt_valtage", m_serial_servo_config.satrt_valtage);
+    m_date_writer.write("s_start_valtage", m_serial_servo_config.start_valtage);
     m_date_writer.write("s_selflock_set", m_serial_servo_config.selflock_set);
     m_date_writer.write("s_servo_direction", m_serial_servo_config.servo_direction);
     m_date_writer.write("s_signal_reset", m_serial_servo_config.signal_reset);
@@ -113,7 +113,7 @@ void DataControl::save_general_config()
     m_general_servo_config.power_bottom = m_ui->pwBottomEdit->text();
     m_general_servo_config.power_mid = m_ui->pwMidEdit->text();
     m_general_servo_config.power_top = m_ui->pwTopEdit->text();
-    m_general_servo_config.satrt_valtage = m_ui->startVEdit->text();
+    m_general_servo_config.start_valtage = m_ui->startVEdit->text();
     m_general_servo_config.selflock_set = m_ui->selflockSetEdit->text();
     m_general_servo_config.servo_direction = m_ui->servoDirEdit->text();
     m_general_servo_config.signal_reset = m_ui->signalResetEdit->text();
@@ -134,7 +134,7 @@ void DataControl::save_general_tofile()
     m_date_writer.write("g_power_bottom", m_general_servo_config.power_bottom);
     m_date_writer.write("g_power_mid", m_general_servo_config.power_mid);
     m_date_writer.write("g_power_top", m_general_servo_config.power_top);
-    m_date_writer.write("g_satrt_valtage", m_general_servo_config.satrt_valtage);
+    m_date_writer.write("g_start_valtage", m_general_servo_config.start_valtage);
     m_date_writer.write("g_selflock_set", m_general_servo_config.selflock_set);
     m_date_writer.write("g_servo_direction", m_general_servo_config.servo_direction);
     m_date_writer.write("g_signal_reset", m_general_servo_config.signal_reset);
@@ -157,7 +157,7 @@ void DataControl::read_serial_config()
     m_ui->pwBottomEditS->setText(m_serial_servo_config.power_bottom);
     m_ui->pwMidEditS->setText( m_serial_servo_config.power_mid);
     m_ui->pwTopEditS->setText(m_serial_servo_config.power_top);
-    m_ui->startVEditS->setText(m_serial_servo_config.satrt_valtage);
+    m_ui->startVEditS->setText(m_serial_servo_config.start_valtage);
     m_ui->selflockSetEditS->setText(m_serial_servo_config.selflock_set);
     m_ui->servoDirEditS->setText(m_serial_servo_config.servo_direction);
     m_ui->signalResetEditS->setText( m_serial_servo_config.signal_reset);
@@ -180,7 +180,7 @@ void DataControl::read_serial_fromfile()
     m_serial_servo_config.power_bottom = m_data_reader.read("s_power_bottom");
     m_serial_servo_config.power_mid =  m_data_reader.read ("s_power_mid");
     m_serial_servo_config.power_top =  m_data_reader.read("s_power_top");
-    m_serial_servo_config.satrt_valtage = m_data_reader.read("s_satrt_valtage");
+    m_serial_servo_config.start_valtage = m_data_reader.read("s_start_valtage");
     m_serial_servo_config.selflock_set = m_data_reader.read("s_selflock_set");
     m_serial_servo_config.servo_direction =m_data_reader.read("s_servo_direction");
     m_serial_servo_config.signal_reset = m_data_reader.read("s_signal_reset");
@@ -201,7 +201,7 @@ void DataControl::read_general_config()
     m_ui->pwBottomEdit->setText(m_general_servo_config.power_bottom);
     m_ui->pwMidEdit->setText( m_general_servo_config.power_mid);
     m_ui->pwTopEdit->setText(m_general_servo_config.power_top);
-    m_ui->startVEdit->setText(m_general_servo_config.satrt_valtage);
+    m_ui->startVEdit->setText(m_general_servo_config.start_valtage);
     m_ui->selflockSetEdit->setText(m_general_servo_config.selflock_set);
     m_ui->servoDirEdit->setText(m_general_servo_config.servo_direction);
     m_ui->signalResetEdit->setText( m_general_servo_config.signal_reset);
@@ -222,10 +222,27 @@ void DataControl::read_general_fromfile()
      m_general_servo_config.power_bottom = m_data_reader.read("power_bottom");
      m_general_servo_config.power_mid =  m_data_reader.read ("power_mid");
      m_general_servo_config.power_top =  m_data_reader.read("power_top");
-     m_general_servo_config.satrt_valtage = m_data_reader.read("satrt_valtage");
+     m_general_servo_config.start_valtage = m_data_reader.read("start_valtage");
      m_general_servo_config.selflock_set = m_data_reader.read("selflock_set");
      m_general_servo_config.servo_direction =m_data_reader.read("servo_direction");
      m_general_servo_config.signal_reset = m_data_reader.read("signal_reset");
      m_general_servo_config.stalling_guard = m_data_reader.read("stalling_guard");
+}
+
+void DataControl::servo_config()
+{
+    m_ui->commonIdLineEdit->setText(m_servo_config.common_id);
+    m_ui->enablePowerResetLineEdit->setText(m_servo_config.enable_power_reset);
+    m_ui->motorLineEdit->setText(m_servo_config.motor);
+    m_ui->powerEnableLineEdit->setText(m_servo_config.power_enabel);
+    m_ui->resetPositionlineEdit->setText(m_servo_config.reset_position);
+    m_ui->resetStepLineEdit->setText(m_servo_config.reset_step);
+    m_ui->resetTimelineEdit->setText( m_servo_config.reset_time);
+    m_ui->servoIdLineEdit->setText(m_servo_config.servo_id);
+    m_ui->signalTolerLineEdit->setText(m_servo_config.signal_toler);
+    m_ui->stallingTimeLineEdit->setText(m_servo_config.stalling_time);
+    m_ui->startTimeLineEdit->setText( m_servo_config.start_time);
+    m_ui->startStepLineEdit->setText( m_servo_config.start_step);
+    m_ui->GuiVersionLineEdit->setText(m_servo_config.version);
 }
 

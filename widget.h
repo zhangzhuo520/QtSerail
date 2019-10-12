@@ -58,6 +58,8 @@ private slots:
 
     void on_SaveFilePushButton_clicked();
 
+    void on_btn_read_configU_clicked();
+
 private:
     void initUi();
     Ui::Widget *ui;

@@ -24,7 +24,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-    main.cpp \
     widget.cpp \
      frmmain.cpp \
     api/iconhelper.cpp \
@@ -34,7 +33,9 @@ SOURCES += \
     usercontrol/frminputbox.cpp \
     datacontrol.cpp \
     datareader.cpp \
-    datawriter.cpp
+    datawriter.cpp \
+    main.cpp \
+    serialcontrol.cpp
 
 HEADERS += \
      widget.h \
@@ -48,7 +49,9 @@ HEADERS += \
     usercontrol/frminputbox.h \
     datacontrol.h \
     datareader.h \
-    datawriter.h
+    datawriter.h \
+    serialcontrol.h \
+    datatype.h
 
 FORMS += \
         widget.ui \

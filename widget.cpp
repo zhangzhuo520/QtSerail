@@ -223,6 +223,11 @@ void Widget::on_btn_load_configU_clicked()
     m_data_control->save_general_tofile();
 }
 
+void Widget::on_btn_read_configU_clicked()
+{
+    m_data_control->read_general_config();
+    m_data_control->read_general_fromfile();
+}
 void Widget::on_btn_servo_resetU_clicked()
 {
 
@@ -236,7 +241,8 @@ void Widget::on_btn_load_configS_clicked()
 
 void Widget::on_btn_read_configS_clicked()
 {
-
+   m_data_control->read_serial_config();
+   m_data_control->read_serial_config();
 }
 
 void Widget::on_btn_servo_resetS_clicked()
@@ -278,3 +284,5 @@ void Widget::on_SaveFilePushButton_clicked()
 {
 
 }
+
+
